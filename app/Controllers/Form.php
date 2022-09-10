@@ -16,7 +16,9 @@ class Form extends BaseController
         $nama = $this->request->getVar('nama');
         $umur = (int)$this->request->getVar('umur');
 
-        if ($umur <= 5) {
+        if ($umur <= 0) {
+            $rentang_umur = "Stop being idiot";
+        } elseif ($umur <= 5) {
             $rentang_umur = "Balita";
         } elseif ($umur <= 12) {
             $rentang_umur = "Anak";
