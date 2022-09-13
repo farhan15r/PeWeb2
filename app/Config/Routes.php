@@ -44,6 +44,24 @@ $routes->post('/post_response', 'Form::post_response');
 $routes->get('/get_request', 'Form::get_request');
 $routes->get('/get_response/(:segment)/(:segment)', 'Form::get_response/$1/$2');
 
+//crud single table
+$routes->get('/kategori', 'Kategori::list');
+$routes->get('/kategori/insert', 'Kategori::insert');
+$routes->post('/kategori/insert', 'Kategori::insert_save');
+$routes->get('/kategori/(:segment)', 'Kategori::update/$1');
+$routes->post('/kategori/(:segment)', 'Kategori::update_save/$1');
+$routes->get('/kategori/delete/(:segment)', 'Kategori::delete/$1');
+//end crud single table
+
+
+// tugas
+
+$routes->get('/provinsi', 'Provinsi::list');
+$routes->get('/provinsi/insert', 'Provinsi::insert');
+$routes->post('/provinsi/insert', 'Provinsi::insert_save');
+
+// end tugas
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

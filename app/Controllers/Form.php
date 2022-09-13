@@ -28,6 +28,8 @@ class Form extends BaseController
             $rentang_umur = "Dewasa";
         } elseif ($umur <= 100) {
             $rentang_umur = "Lansia";
+        } else {
+            $rentang_umur = "TUA AMAT";
         }
 
         //data dikirim ke view get_response
