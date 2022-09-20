@@ -47,25 +47,27 @@ class Provinsi extends BaseController
     public function update($id)
     {
         //select data kategori yang dipilih (filter by id)
-        $data =  $this->KategoriModel->where('id', $id)->first();
+        $data =  $this->ProvinsiModel->where('id', $id)->first();
 
         $output = [
             'data' => $data,
         ];
 
-        return view('kategori_update', $output);
+        return view('provinsi_update', $output);
     }
 
     public function update_save($id)
     {
         $nama = $this->request->getVar('nama');
+        $wilayah = $this->request->getVar('wilayah');
 
-        //update data ke table kategori filter by id
-        $this->KategoriModel->update($id, [
+        //update data ke table provinsi filter by id
+        $this->ProvinsiModel->update($id, [
             'nama' => $nama,
+            'wilayah' => $wilayah,
         ]);
 
-        return redirect()->to('kategori/');
+        return redirect()->to('provinsi/');
     }
 
     public function delete($id)

@@ -1,4 +1,4 @@
-<form method="post" action="<?= site_url('kategori/'.$data['id']) ?>">
+<form method="post" action="<?= site_url('kategori/' . $data['id']) ?>">
   <?= csrf_field() ?>
   <table>
     <tr>
@@ -11,7 +11,7 @@
       <td>&nbsp;</td>
       <td>
         <button type="submit">Save</button>
-        <a href="<?= site_url('kategori/delete/'.$data['id']) ?>" >Delete</a>
+        <a href="<?= site_url('kategori/delete/' . $data['id']) ?>" onclick="return confirm('yakin bro?')">Delete</a>
       </td>
     </tr>
   </table>

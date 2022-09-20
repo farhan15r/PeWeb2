@@ -18,7 +18,7 @@
         <td><?= $row['nama']; ?></td>
         <td><?= $row['wilayah']; ?></td>
         <td nowrap>
-          <a href="<?= site_url('kategori/' . $row['id']) ?>">Update</a>
+          <a href="<?= site_url('provinsi/' . $row['id']) ?>">Update</a>
         </td>
       </tr>
     <?php endforeach ?>

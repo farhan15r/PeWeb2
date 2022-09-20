@@ -59,6 +59,9 @@ $routes->get('/kategori/delete/(:segment)', 'Kategori::delete/$1');
 $routes->get('/provinsi', 'Provinsi::list');
 $routes->get('/provinsi/insert', 'Provinsi::insert');
 $routes->post('/provinsi/insert', 'Provinsi::insert_save');
+$routes->get('/provinsi/(:segment)', 'Provinsi::update/$1');
+$routes->post('/provinsi/(:segment)', 'Provinsi::update_save/$1');
+$routes->get('/provinsi/delete/(:segment)', 'Provinsi::delete/$1');
 
 // end tugas
 
