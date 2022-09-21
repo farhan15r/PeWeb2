@@ -1,7 +1,7 @@
 <?php //dd($data)
 ?>
 
-<form method="post" action="<?= site_url('provinsidd/' . $data['id']) ?>">
+<form method="post" action="<?= site_url('provinsi/' . $data['id']) ?>">
   <?= csrf_field() ?>
   <table>
     <tr>
