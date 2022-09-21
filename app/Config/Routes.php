@@ -63,6 +63,15 @@ $routes->get('/provinsi/(:segment)', 'Provinsi::update/$1');
 $routes->post('/provinsi/(:segment)', 'Provinsi::update_save/$1');
 $routes->get('/provinsi/delete/(:segment)', 'Provinsi::delete/$1');
 
+// ming 4
+
+$routes->get('/provinsidd', 'Provinsidd::list');
+$routes->get('/provinsidd/insert', 'Provinsidd::insert');
+$routes->post('/provinsidd/insert', 'Provinsidd::insert_save');
+$routes->get('/provinsidd/(:segment)', 'Provinsidd::update/$1');
+$routes->post('/provinsidd/(:segment)', 'Provinsidd::update_save/$1');
+$routes->get('/provinsidd/delete/(:segment)', 'Provinsidd::delete/$1');
+
 // end tugas
 
 /*

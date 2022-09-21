@@ -13,9 +13,11 @@
     <tr>
       <td>Wilayah</td>
       <td>
-        <input type="radio" name="wilayah" value="WIB" <?= $data['wilayah'] == 'WIB' ? 'checked' : '' ?> /> <label for="wilayah">WIB</label>
-        <input type="radio" name="wilayah" value="WITA" <?= $data['wilayah'] == 'WITA' ? 'checked' : '' ?> /> <label for="wilayah">WITA</label>
-        <input type="radio" name="wilayah" value="WIT" <?= $data['wilayah'] == 'WIT' ? 'checked' : '' ?> /> <label for="wilayah">WIT</label>
+        <select name="wilayah" id="">
+          <option value="WIB" <?= $data['wilayah'] == 'WIB' ? 'selected' : '' ?>>WIB</option>
+          <option value="WITA" <?= $data['wilayah'] == 'WITA' ? 'selected' : '' ?>>WITA</option>
+          <option value="WIT" <?= $data['wilayah'] == 'WIT' ? 'selected' : '' ?>>WIT</option>
+        </select>
       </td>
     </tr>
     <tr>
