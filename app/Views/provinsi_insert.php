@@ -10,9 +10,14 @@
     <tr>
       <td>Wilayah</td>
       <td>
-        <input type="radio" name="wilayah" value="WIB" /> <label for="wilayah">WIB</label>
+        <select name="wilayah" id="">
+          <option value="WIB">WIB</option>
+          <option value="WITA">WITA</option>
+          <option value="WIT">WIT</option>
+        </select>
+        <!-- <input type="radio" name="wilayah" value="WIB" /> <label for="wilayah">WIB</label>
         <input type="radio" name="wilayah" value="WITA" /> <label for="wilayah">WITA</label>
-        <input type="radio" name="wilayah" value="WIT" /> <label for="wilayah">WIT</label>
+        <input type="radio" name="wilayah" value="WIT" /> <label for="wilayah">WIT</label> -->
       </td>
     </tr>
     <tr>

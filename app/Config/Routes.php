@@ -53,6 +53,15 @@ $routes->post('/kategori/(:segment)', 'Kategori::update_save/$1');
 $routes->get('/kategori/delete/(:segment)', 'Kategori::delete/$1');
 //end crud single table
 
+//crud 1-Many table
+$routes->get('/buku', 'Buku::list');
+$routes->get('/buku/insert', 'Buku::insert');
+$routes->post('/buku/insert', 'Buku::insert_save');
+$routes->get('/buku/(:segment)', 'Buku::update/$1');
+$routes->post('/buku/(:segment)', 'Buku::update_save/$1');
+$routes->get('/buku/delete/(:segment)', 'Buku::delete/$1');
+//end crud 1-Many table
+
 
 // tugas
 
@@ -63,14 +72,13 @@ $routes->get('/provinsi/(:segment)', 'Provinsi::update/$1');
 $routes->post('/provinsi/(:segment)', 'Provinsi::update_save/$1');
 $routes->get('/provinsi/delete/(:segment)', 'Provinsi::delete/$1');
 
-// ming 4
-
-$routes->get('/provinsidd', 'Provinsidd::list');
-$routes->get('/provinsidd/insert', 'Provinsidd::insert');
-$routes->post('/provinsidd/insert', 'Provinsidd::insert_save');
-$routes->get('/provinsidd/(:segment)', 'Provinsidd::update/$1');
-$routes->post('/provinsidd/(:segment)', 'Provinsidd::update_save/$1');
-$routes->get('/provinsidd/delete/(:segment)', 'Provinsidd::delete/$1');
+// ming 5
+$routes->get('/kota', 'Kota::list');
+$routes->get('/kota/insert', 'Kota::insert');
+$routes->post('/kota/insert', 'Kota::insert_save');
+$routes->get('/kota/(:segment)', 'Kota::update/$1');
+$routes->post('/kota/(:segment)', 'Kota::update_save/$1');
+$routes->get('/kota/delete/(:segment)', 'Kota::delete/$1');
 
 // end tugas
 
