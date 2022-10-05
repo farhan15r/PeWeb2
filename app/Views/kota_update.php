@@ -4,15 +4,10 @@
     <tr>
       <td>Provinsi</td>
       <td>
-        <select name="provinsi_id">
-          <?php foreach ($data_provinsi as $provinsi) : ?>
-            <?php if ($provinsi['id'] == $data['provinsi_id']) : ?>
-              <option value="<?= $provinsi['id'] ?>" selected><?= $provinsi['nama'] ?></option>
-            <?php else : ?>
-              <option value="<?= $provinsi['id'] ?>"><?= $provinsi['nama'] ?></option>
-            <?php endif ?>
-          <?php endforeach ?>
-        </select>
+        <?php foreach ($data_provinsi as $option) : ?>
+          <input type="radio" name="provinsi_id" value="<?= $option['id'] ?>" <?= $data['provinsi_id'] == $option['id'] ? 'checked' : '' ?> />
+          <label for="wilayah"><?= $option['nama'] ?></label>
+        <?php endforeach ?>
       </td>
     </tr>
     <tr>
@@ -25,7 +20,7 @@
       <td>&nbsp;</td>
       <td>
         <button type="submit">Save</button>
-        <a href="<?= site_url('kota/delete/' . $data['id']) ?>">Delete</a>
+        <a href="<?= site_url('kota/delete/' . $data['id']) ?>" onclick="return confirm('yakin cuy?????')">Delete</a>
       </td>
     </tr>
   </table>

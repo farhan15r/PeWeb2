@@ -6,6 +6,7 @@
     <tr>
       <th>No</th>
       <th>Nama Kota</th>
+      <th>Id Provinsi</th>
       <th>Nama Provinsi</th>
       <th>Action</th>
     </tr>
@@ -16,6 +17,7 @@
       <tr>
         <td><?= $num++; ?></td>
         <td><?= $row['nama']; ?></td>
+        <td><?= $row['provinsi_id']; ?></td>
         <td><?= $row['provinsi_nama']; ?></td>
         <td nowrap>
           <a href="<?= site_url('kota/' . $row['id']) ?>">Update</a>

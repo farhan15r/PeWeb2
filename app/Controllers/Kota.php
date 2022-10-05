@@ -18,7 +18,7 @@ class Kota extends BaseController
     public function list()
     {
         //select data from table buku
-        $list = $this->KotaModel->select('kota.id, kota.nama, provinsi.nama AS provinsi_nama')->join('provinsi', 'kota.provinsi_id = provinsi.id')->orderBy('kota.nama ')->findAll();
+        $list = $this->KotaModel->select('kota.id, kota.nama, provinsi.id AS provinsi_id, provinsi.nama AS provinsi_nama')->join('provinsi', 'kota.provinsi_id = provinsi.id')->orderBy('kota.nama ')->findAll();
 
         $output = [
             'list' => $list,

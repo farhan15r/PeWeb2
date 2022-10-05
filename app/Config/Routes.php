@@ -38,7 +38,6 @@ $routes->set404Override();
 $routes->get('/', 'Home::index');
 $routes->get('/room', 'Home::room');
 
-
 $routes->get('/post_request', 'Form::post_request');
 $routes->post('/post_response', 'Form::post_response');
 $routes->get('/get_request', 'Form::get_request');
@@ -62,9 +61,7 @@ $routes->post('/buku/(:segment)', 'Buku::update_save/$1');
 $routes->get('/buku/delete/(:segment)', 'Buku::delete/$1');
 //end crud 1-Many table
 
-
 // tugas
-
 $routes->get('/provinsi', 'Provinsi::list');
 $routes->get('/provinsi/insert', 'Provinsi::insert');
 $routes->post('/provinsi/insert', 'Provinsi::insert_save');
@@ -79,6 +76,16 @@ $routes->post('/kota/insert', 'Kota::insert_save');
 $routes->get('/kota/(:segment)', 'Kota::update/$1');
 $routes->post('/kota/(:segment)', 'Kota::update_save/$1');
 $routes->get('/kota/delete/(:segment)', 'Kota::delete/$1');
+
+// TB 1
+$routes->get('/tb1/satuan_suhu', 'SatuanSuhu::list');
+
+$routes->get('/tb1/konversi_suhu', 'KonversiSuhu::list');
+$routes->get('/tb1/konversi_suhu/insert', 'KonversiSuhu::insert');
+$routes->post('/tb1/konversi_suhu/insert', 'KonversiSuhu::insert_save');
+$routes->get('/tb1/konversi_suhu/(:segment)', 'KonversiSuhu::update/$1');
+$routes->post('/tb1/konversi_suhu/(:segment)', 'KonversiSuhu::update_save/$1');
+$routes->get('/tb1/konversi_suhu/delete/(:segment)', 'KonversiSuhu::delete/$1');
 
 // end tugas
 

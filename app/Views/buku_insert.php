@@ -5,9 +5,9 @@
       <td>Kategori</td>
       <td>
         <select name="kategori_id">
-          <?php foreach($data_kategori as $kategori):?>
-          <option value="<?= $kategori['id'] ?>"><?= $kategori['nama'] ?></option>
-          <?php endforeach?>
+          <?php foreach ($data_kategori as $kategori) : ?>
+            <option value="<?= $kategori['id'] ?>"><?= $kategori['nama'] ?></option>
+          <?php endforeach ?>
         </select>
       </td>
     </tr>
