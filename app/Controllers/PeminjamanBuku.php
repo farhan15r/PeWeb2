@@ -23,7 +23,7 @@ class PeminjamanBuku extends BaseController
     $peminjaman =  $this->PeminjamanModel->where('id', $peminjaman_id)->first();
 
     //peminjaman_buku
-    $peminjaman_buku = $this->PeminjamanBukuModel->select('peminjaman_buku.id, buku.judul')
+    $peminjaman_buku = $this->PeminjamanBukuModel->select('peminjaman_buku.id, buku.judul, buku.id AS buku_id')
       ->join('buku', 'peminjaman_buku.buku_id = buku.id')
       ->where('peminjaman_buku.peminjaman_id', $peminjaman_id)
       ->findAll();
@@ -75,19 +75,15 @@ class PeminjamanBuku extends BaseController
     return redirect()->to('peminjaman_buku/' . $peminjaman_id);
   }
 
-  public function delete($peminjaman_buku_id)
+  public function delete($peminjaman_buku_id, $buku_id)
   {
-    $peminjaman = $this->PeminjamanBukuModel->where('id', $peminjaman_buku_id)->first();
-    $buku_id = $peminjaman['buku_id'];
-    $peminjaman_id = $peminjaman['peminjaman_id'];
-
     // dd($peminjaman_buku_id);
 
     $db = \Config\Database::connect();
     $db->transStart();
 
     // delete 
-    $this->PeminjamanBukuModel->where('id', $peminjaman_buku_id)->delete();
+    $this->PeminjamanBukuModel->delete($peminjaman_buku_id);
 
     //ambil data stok di table buku
     $buku = $this->BukuModel->where('id', $buku_id)->first();
@@ -99,6 +95,6 @@ class PeminjamanBuku extends BaseController
 
     $db->transComplete();
 
-    return redirect()->to('peminjaman_buku/' . $peminjaman_id);
+    return redirect()->back();
   }
 }

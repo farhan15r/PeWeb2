@@ -94,7 +94,7 @@ $routes->get('/peminjaman', 'Peminjaman::list');
 $routes->get('/peminjaman_buku/(:segment)', 'PeminjamanBuku::list/$1');
 $routes->get('/peminjaman_buku/insert/(:segment)', 'PeminjamanBuku::insert/$1');
 $routes->post('/peminjaman_buku/insert/(:segment)', 'PeminjamanBuku::insert_save/$1');
-$routes->get('/peminjaman_buku/delete/(:segment)', 'PeminjamanBuku::delete/$1');
+$routes->get('/peminjaman_buku/delete/(:segment)/(:segment)', 'PeminjamanBuku::delete/$1/$2');
 //end crud Many-Many table
 
 /*
