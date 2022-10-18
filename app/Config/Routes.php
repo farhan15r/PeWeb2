@@ -89,6 +89,14 @@ $routes->get('/tb1/konversi_suhu/delete/(:segment)', 'KonversiSuhu::delete/$1');
 
 // end tugas
 
+//crud Many-Many table
+$routes->get('/peminjaman', 'Peminjaman::list');
+$routes->get('/peminjaman_buku/(:segment)', 'PeminjamanBuku::list/$1');
+$routes->get('/peminjaman_buku/insert/(:segment)', 'PeminjamanBuku::insert/$1');
+$routes->post('/peminjaman_buku/insert/(:segment)', 'PeminjamanBuku::insert_save/$1');
+$routes->get('/peminjaman_buku/delete/(:segment)', 'PeminjamanBuku::delete/$1');
+//end crud Many-Many table
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
