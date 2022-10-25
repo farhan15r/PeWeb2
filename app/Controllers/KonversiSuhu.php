@@ -100,7 +100,7 @@ class KonversiSuhu extends BaseController
         } else {
             $kondisi = 'didih';
         }
-        //update data ke table buku filter by id
+        //update data ke table konversi filter by id
         $this->KonversiSuhuModel->update($id, [
             'satuan_id' => $satuan_id,
             'suhu' => $suhu,

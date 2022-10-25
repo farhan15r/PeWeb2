@@ -25,4 +25,5 @@
   </tbody>
 
 </table>
-<a href="<?= site_url('buku_export') ?>">Export Excel</a>
+<a href="<?= site_url('buku_export_xls') ?>">Export Excel</a>
+<a href="<?= site_url('buku_export_pdf') ?>">Export PDF</a>

@@ -97,6 +97,11 @@ $routes->post('/peminjaman_buku/insert/(:segment)', 'PeminjamanBuku::insert_save
 $routes->get('/peminjaman_buku/delete/(:segment)/(:segment)', 'PeminjamanBuku::delete/$1/$2');
 //end crud Many-Many table
 
+//export
+$routes->get('/buku_export_xls', 'BukuExport::export_xls');
+$routes->get('/buku_export_pdf', 'BukuExport::export_pdf');
+// end export
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
