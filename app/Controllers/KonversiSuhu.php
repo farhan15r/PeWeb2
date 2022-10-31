@@ -44,14 +44,14 @@ class KonversiSuhu extends BaseController
         $satuan_id = $this->request->getVar('satuan_id');
         $suhu = $this->request->getVar('suhu');
 
-        $batas_suhu = $this->SatuanSuhuModel->select('titik_beku, titik_didih')->where('id', $satuan_id)->first();
+        $batas_suhu = $this->SatuanSuhuModel->select('titik_beku, boiling_point')->where('id', $satuan_id)->first();
 
         $titik_beku = $batas_suhu['titik_beku'];
-        $titik_didih = $batas_suhu['titik_didih'];
+        $boiling_point = $batas_suhu['boiling_point'];
 
         if ($suhu <= $titik_beku) {
             $kondisi = 'beku';
-        } elseif ($suhu <= $titik_didih) {
+        } elseif ($suhu <= $boiling_point) {
             $kondisi = 'normal';
         } else {
             $kondisi = 'didih';
