@@ -102,6 +102,12 @@ $routes->get('/buku_export_xls', 'BukuExport::export_xls');
 $routes->get('/buku_export_pdf', 'BukuExport::export_pdf');
 // end export
 
+// chart js
+$routes->get('/chart/pie', 'Chart::pie');
+$routes->get('/chart/line', 'Chart::line');
+$routes->get('/chart/kategori', 'Chart::kategori');
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
