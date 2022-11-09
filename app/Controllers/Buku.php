@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Controllers;
 
 //memanggil model
@@ -17,7 +18,7 @@ class Buku extends BaseController
     public function list()
     {
         //select data from table buku
-        $list = $this->BukuModel->select('buku.id, buku.judul, kategori.nama AS kategori_nama')->join('kategori','buku.kategori_id = kategori.id')->orderBy('kategori.nama, judul')->findAll();
+        $list = $this->BukuModel->select('buku.id, buku.judul, buku.stok, kategori.nama AS kategori_nama')->join('kategori', 'buku.kategori_id = kategori.id')->orderBy('kategori.nama, judul')->findAll();
 
         $output = [
             'list' => $list,
@@ -56,7 +57,7 @@ class Buku extends BaseController
     {
         //select data kategori yang dipilih (filter by id)
         $data =  $this->BukuModel->where('id', $id)->first();
-        
+
         //select data from table kategori (untuk data di selectbox/dropdown)
         $data_kategori = $this->KategoriModel->orderBy('nama')->findAll();
 
@@ -83,7 +84,7 @@ class Buku extends BaseController
     }
 
     public function delete($id)
-    {   
+    {
         //delete data table buku filter by id
         $this->BukuModel->delete($id);
         return redirect()->to('buku');

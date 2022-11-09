@@ -106,7 +106,7 @@ $routes->get('/buku_export_pdf', 'BukuExport::export_pdf');
 $routes->get('/chart/pie', 'Chart::pie');
 $routes->get('/chart/line', 'Chart::line');
 $routes->get('/chart/kategori', 'Chart::kategori');
-
+// end chart js
 
 /*
  * --------------------------------------------------------------------
