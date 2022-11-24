@@ -1,6 +1,9 @@
+<?= $this->extend('layouts/main'); ?>
+<?= $this->section('content'); ?>
 <div id="chart"></div>
+<?= $this->endSection('content'); ?>
 
-
+<?= $this->section('script'); ?>
 <!-- online -->
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
@@ -24,3 +27,4 @@
   var chart = new ApexCharts(document.querySelector("#chart"), options);
   chart.render();
 </script>
+<?= $this->endSection('script'); ?>

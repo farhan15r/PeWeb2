@@ -35,7 +35,7 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
+$routes->get('/', 'Auth::login');
 $routes->get('/room', 'Home::room');
 
 $routes->get('/post_request', 'Form::post_request');
@@ -107,6 +107,10 @@ $routes->get('/chart/pie', 'Chart::pie');
 $routes->get('/chart/line', 'Chart::line');
 $routes->get('/chart/kategori', 'Chart::kategori');
 // end chart js
+
+$routes->get('/login', 'Auth::login');
+$routes->post('/login', 'Auth::login_submit');
+$routes->get('/logout', 'Auth::logout');
 
 /*
  * --------------------------------------------------------------------

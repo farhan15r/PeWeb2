@@ -1,6 +1,14 @@
+<?= $this->extend('layouts/main'); ?>
+<?= $this->section('content'); ?>
+
 <div id="chart"></div>
+<br>
 <div id="bar"></div>
 
+<?= $this->endSection('content'); ?>
+
+
+<?= $this->section('script'); ?>
 
 <!-- online -->
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
@@ -90,3 +98,5 @@
   // var chart = new ApexCharts(document.querySelector("#chart"), options);
   // chart.render();
 </script>
+
+<?= $this->endSection('script'); ?>
